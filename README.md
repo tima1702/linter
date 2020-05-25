@@ -8,7 +8,7 @@
  
  `create file .eslintrc with the following content inside your root project folder`
  
-  ``{
+  ```{
       "extends": "./index.js",
       "rules": {
         // disable requiring trailing commas because it might be nice to revert to
@@ -21,7 +21,7 @@
         "jasmine": true
       }
     }
-`` 
+``` 
  
 
 #SETUP WEBSTORM
