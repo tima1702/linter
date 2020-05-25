@@ -1,7 +1,4 @@
 const assign = require('object.assign');
-const baseStyleRules = require('eslint-config-airbnb-base/rules/style').rules;
-
-const dangleRules = baseStyleRules['no-underscore-dangle'];
 
 module.exports = {
   plugins: [
@@ -17,10 +14,6 @@ module.exports = {
   // View link below for react rules documentation
   // https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
   rules: {
-    'no-underscore-dangle': [dangleRules[0], assign({}, dangleRules[1], {
-      allow: dangleRules[1].allow.concat(['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__']),
-    })],
-
     // Specify whether double or single quotes should be used in JSX attributes
     // https://eslint.org/docs/rules/jsx-quotes
     'jsx-quotes': ['error', 'prefer-double'],
@@ -481,12 +474,10 @@ module.exports = {
 
     // Enforce state initialization style
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/state-in-constructor.md
-    // TODO: set to "never" once babel-preset-airbnb supports public class fields
     'react/state-in-constructor': ['error', 'always'],
 
     // Enforces where React component static properties should be positioned
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
-    // TODO: set to "static public field" once babel-preset-airbnb supports public class fields
     'react/static-property-placement': ['error', 'property assignment'],
 
     // Disallow JSX props spreading
@@ -542,7 +533,7 @@ module.exports = {
       version: 'detect',
     },
     propWrapperFunctions: [
-      'forbidExtraProps', // https://www.npmjs.com/package/airbnb-prop-types
+      'forbidExtraProps',
       'exact', // https://www.npmjs.com/package/prop-types-exact
       'Object.freeze', // https://tc39.github.io/ecma262/#sec-object.freeze
     ],

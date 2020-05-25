@@ -11,5 +11,8 @@
     "url": "https://github.com/Paul-Petrash/linter"
   },
   "author": "Paul",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "eslint-plugin-import": "2.20.2"
+  }
 }
