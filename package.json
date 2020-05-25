@@ -1,5 +1,5 @@
 {
-  "name": "linter",
+  "name": "eslint-config-linter",
   "version": "0.0.1",
   "description": "App linter",
   "main": "index.js",
