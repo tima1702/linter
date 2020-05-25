@@ -13,6 +13,7 @@
   "author": "Paul",
   "license": "ISC",
   "dependencies": {
+    "confusing-browser-globals": "1.0.9",
     "eslint-plugin-import": "2.20.2"
   }
 }
