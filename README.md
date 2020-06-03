@@ -8,6 +8,7 @@
  
  `create file .eslintrc with the following content inside your root project folder`
  
+For the frontend 
   ```{
       "extends": "linter",
       "rules": {
@@ -22,6 +23,31 @@
       }
     }
 ``` 
+For backend 
+
+```
+{
+  "extends": "linter",
+  "rules": {
+    // disable requiring trailing commas because it might be nice to revert to
+    // being JSON at some point, and I don't want to make big changes now.
+    "comma-dangle": 0,
+    "global-require": "off",
+    "prefer-promise-reject-errors": "off",
+    "consistent-return": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+    "no-unused-expressions": "off",
+    "no-use-before-define": [
+      "error", { "functions": false, "classes": true, "variables": true }]
+  },
+  "env": {
+    "browser": false,
+    "node": true,
+    "jasmine": true
+  }
+}
+```
  
 
 #SETUP WEBSTORM
